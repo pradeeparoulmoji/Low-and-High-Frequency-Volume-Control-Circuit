@@ -1,0 +1,23 @@
+* C:\Users\prada\Desktop\PROGETTO ELETTRONICA\FINALL2.sch
+
+* Schematics Version 9.1 - Web Update 1
+* Mon Jan 15 16:13:56 2024
+
+
+
+** Analysis setup **
+.ac DEC 101 0.1 100K
+.OP 
+
+
+* From [PSPICE NETLIST] section of pspiceev.ini:
+.lib "nom.lib"
+
+.INC "FINALL2.net"
+.INC "FINALL2.als"
+
+
+.probe
+
+
+.END

@@ -1,0 +1,23 @@
+* C:\Users\prada\Desktop\PROGETTO ELETTRONICA\FINALL2 transient.sch
+
+* Schematics Version 9.1 - Web Update 1
+* Wed Jan 10 17:47:24 2024
+
+
+
+** Analysis setup **
+.tran 0ns 1000000ns
+.OP 
+
+
+* From [PSPICE NETLIST] section of pspiceev.ini:
+.lib "nom.lib"
+
+.INC "FINALL2 transient.net"
+.INC "FINALL2 transient.als"
+
+
+.probe
+
+
+.END

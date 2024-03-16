@@ -1,0 +1,308 @@
+
+**** 01/15/24 16:13:56 *********** Evaluation PSpice (Nov 1999) **************
+
+ * C:\Users\prada\Desktop\PROGETTO ELETTRONICA\FINALL2.sch
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+* Schematics Version 9.1 - Web Update 1
+* Mon Jan 15 16:13:56 2024
+
+
+
+** Analysis setup **
+.ac DEC 101 0.1 100K
+.OP 
+
+
+* From [PSPICE NETLIST] section of pspiceev.ini:
+.lib "nom.lib"
+
+.INC "FINALL2.net"
+
+**** INCLUDING FINALL2.net ****
+* Schematics Netlist *
+
+
+
+C_C6         $N_0001 $N_0002  50n  
+C_C5         $N_0001 $N_0003  50n  
+X_U1         0 $N_0004 $N_0005 $N_0006 $N_0007 uA741
+X_U3         0 $N_0001 $N_0010 $N_0011 $N_0012 uA741
+R_R1         $N_0016 $N_0015  10k  
+R_R4         $N_0017 $N_0007  10k  
+R_R5         $N_0007 $N_0002  10k  
+R_R6         $N_0002 $N_0001  10k  
+R_R8         $N_0003 $N_0012  10k  
+L_L2         $N_0004 $N_0017  0.5  
+L_L1         $N_0004 $N_0015  0.5  
+V_V1         $N_0005 0 2V
+V_V2         0 $N_0006 2V
+V_V3         $N_0010 0 2V
+V_V4         0 $N_0011 2V
+V_V14         $N_0016 0 DC 0V AC 0.5V 
+R_R3         $N_0004 $N_0017  10k  
+R_R9         0 $N_0012  1k  
+R_R2         $N_0015 $N_0004  10k  
+R_R7         $N_0001 $N_0003  10k  
+
+**** RESUMING FINALL2.cir ****
+.INC "FINALL2.als"
+
+
+
+**** INCLUDING FINALL2.als ****
+* Schematics Aliases *
+
+.ALIASES
+C_C6            C6(1=$N_0001 2=$N_0002 )
+C_C5            C5(1=$N_0001 2=$N_0003 )
+X_U1            U1(+=0 -=$N_0004 V+=$N_0005 V-=$N_0006 OUT=$N_0007 )
+X_U3            U3(+=0 -=$N_0001 V+=$N_0010 V-=$N_0011 OUT=$N_0012 )
+R_R1            R1(1=$N_0016 2=$N_0015 )
+R_R4            R4(1=$N_0017 2=$N_0007 )
+R_R5            R5(1=$N_0007 2=$N_0002 )
+R_R6            R6(1=$N_0002 2=$N_0001 )
+R_R8            R8(1=$N_0003 2=$N_0012 )
+L_L2            L2(1=$N_0004 2=$N_0017 )
+L_L1            L1(1=$N_0004 2=$N_0015 )
+V_V1            V1(+=$N_0005 -=0 )
+V_V2            V2(+=0 -=$N_0006 )
+V_V3            V3(+=$N_0010 -=0 )
+V_V4            V4(+=0 -=$N_0011 )
+V_V14           V14(+=$N_0016 -=0 )
+R_R3            R3(1=$N_0004 2=$N_0017 )
+R_R9            R9(1=0 2=$N_0012 )
+R_R2            R2(1=$N_0015 2=$N_0004 )
+R_R7            R7(1=$N_0001 2=$N_0003 )
+.ENDALIASES
+
+
+**** RESUMING FINALL2.cir ****
+.probe
+
+
+.END
+
+**** 01/15/24 16:13:56 *********** Evaluation PSpice (Nov 1999) **************
+
+ * C:\Users\prada\Desktop\PROGETTO ELETTRONICA\FINALL2.sch
+
+
+ ****     Diode MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_U1.dx         X_U3.dx         
+          IS  800.000000E-18  800.000000E-18 
+          RS    1               1            
+
+
+**** 01/15/24 16:13:56 *********** Evaluation PSpice (Nov 1999) **************
+
+ * C:\Users\prada\Desktop\PROGETTO ELETTRONICA\FINALL2.sch
+
+
+ ****     BJT MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_U1.qx         X_U3.qx         
+               NPN             NPN             
+          IS  800.000000E-18  800.000000E-18 
+          BF   93.75           93.75         
+          NF    1               1            
+          BR    1               1            
+          NR    1               1            
+          CN    2.42            2.42         
+           D     .87             .87         
+
+
+**** 01/15/24 16:13:56 *********** Evaluation PSpice (Nov 1999) **************
+
+ * C:\Users\prada\Desktop\PROGETTO ELETTRONICA\FINALL2.sch
+
+
+ ****     SMALL SIGNAL BIAS SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(X_U1.6)-80.98E-09 (X_U1.7) 842.4E-06 (X_U1.8) 842.4E-06 (X_U1.9)    0.0000     
+
+(X_U3.6)-87.57E-09 (X_U3.7) 839.6E-06 (X_U3.8) 839.6E-06 (X_U3.9)    0.0000     
+
+($N_0001) 19.25E-06                   ($N_0002) 427.7E-06                       
+
+($N_0003) 408.5E-06                   ($N_0004) 19.25E-06                       
+
+($N_0005)    2.0000                   ($N_0006)   -2.0000                       
+
+($N_0007) 836.2E-06                   ($N_0010)    2.0000                       
+
+($N_0011)   -2.0000                   ($N_0012) 797.7E-06                       
+
+($N_0015) 19.25E-06                   ($N_0016)    0.0000                       
+
+($N_0017) 19.25E-06                   (X_U1.10)    -.6077                       
+
+(X_U1.11)    1.9603                   (X_U1.12)    1.9603                       
+
+(X_U1.13)    -.5938                   (X_U1.14)    -.5938                       
+
+(X_U1.53)    1.0000                   (X_U1.54)   -1.0000                       
+
+(X_U1.90) 122.1E-06                   (X_U1.91)   40.0000                       
+
+(X_U1.92)  -40.0000                   (X_U1.99)    0.0000                       
+
+(X_U3.10)    -.6077                   (X_U3.11)    1.9603                       
+
+(X_U3.12)    1.9603                   (X_U3.13)    -.5938                       
+
+(X_U3.14)    -.5938                   (X_U3.53)    1.0000                       
+
+(X_U3.54)   -1.0000                   (X_U3.90) 836.7E-06                       
+
+(X_U3.91)   40.0000                   (X_U3.92)  -40.0000                       
+
+(X_U3.99)    0.0000                   
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1        -2.352E-04
+    V_V2        -2.354E-04
+    V_V3        -2.352E-04
+    V_V4        -2.354E-04
+    V_V14        1.925E-09
+    X_U1.vb     -8.098E-13
+    X_U1.vc      1.000E-12
+    X_U1.ve      1.002E-12
+    X_U1.vlim    1.221E-07
+    X_U1.vlp    -4.000E-11
+    X_U1.vln    -4.000E-11
+    X_U3.vb     -8.757E-13
+    X_U3.vc      1.000E-12
+    X_U3.ve      1.002E-12
+    X_U3.vlim    8.367E-07
+    X_U3.vlp    -4.000E-11
+    X_U3.vln    -4.000E-11
+
+    TOTAL POWER DISSIPATION   1.88E-03  WATTS
+
+
+**** 01/15/24 16:13:56 *********** Evaluation PSpice (Nov 1999) **************
+
+ * C:\Users\prada\Desktop\PROGETTO ELETTRONICA\FINALL2.sch
+
+
+ ****     OPERATING POINT INFORMATION      TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+
+
+
+**** VOLTAGE-CONTROLLED CURRENT SOURCES
+
+
+NAME         X_U1.ga     X_U1.gcm    X_U3.ga     X_U3.gcm  
+I-SOURCE    -3.621E-09  -3.622E-09  -3.621E-09  -3.622E-09
+
+
+**** VOLTAGE-CONTROLLED VOLTAGE SOURCES
+
+
+NAME         X_U1.egnd   X_U3.egnd 
+V-SOURCE     0.000E+00   0.000E+00
+I-SOURCE    -1.665E-07  -8.808E-07
+
+
+**** CURRENT-CONTROLLED CURRENT SOURCES
+
+
+NAME         X_U1.fb     X_U3.fb   
+I-SOURCE    -8.314E-06  -9.218E-06
+
+
+**** CURRENT-CONTROLLED VOLTAGE SOURCES
+
+
+NAME         X_U1.hlim   X_U3.hlim 
+V-SOURCE     1.221E-04   8.367E-04
+I-SOURCE    -2.443E-16  -1.674E-15
+
+
+**** DIODES
+
+
+NAME         X_U1.dc     X_U1.de     X_U1.dlp    X_U1.dln    X_U1.dp   
+MODEL        X_U1.dx     X_U1.dx     X_U1.dx     X_U1.dx     X_U1.dx   
+ID          -1.00E-12   -1.00E-12   -4.00E-11   -4.00E-11   -4.00E-12 
+VD          -9.99E-01   -1.00E+00   -4.00E+01   -4.00E+01   -4.00E+00 
+REQ          1.00E+12    1.00E+12    1.00E+12    1.00E+12    1.00E+12 
+CAP          0.00E+00    0.00E+00    0.00E+00    0.00E+00    0.00E+00 
+
+NAME         X_U3.dc     X_U3.de     X_U3.dlp    X_U3.dln    X_U3.dp   
+MODEL        X_U3.dx     X_U3.dx     X_U3.dx     X_U3.dx     X_U3.dx   
+ID          -1.00E-12   -1.00E-12   -4.00E-11   -4.00E-11   -4.00E-12 
+VD          -9.99E-01   -1.00E+00   -4.00E+01   -4.00E+01   -4.00E+00 
+REQ          1.00E+12    1.00E+12    1.00E+12    1.00E+12    1.00E+12 
+CAP          0.00E+00    0.00E+00    0.00E+00    0.00E+00    0.00E+00 
+
+
+**** BIPOLAR JUNCTION TRANSISTORS
+
+
+NAME         X_U1.q1     X_U1.q2     X_U3.q1     X_U3.q2   
+MODEL        X_U1.qx     X_U1.qx     X_U3.qx     X_U3.qx   
+IB           7.98E-08    7.97E-08    7.98E-08    7.97E-08 
+IC           7.48E-06    7.48E-06    7.48E-06    7.48E-06 
+VBE          5.94E-01    5.94E-01    5.94E-01    5.94E-01 
+VBC         -1.96E+00   -1.96E+00   -1.96E+00   -1.96E+00 
+VCE          2.55E+00    2.55E+00    2.55E+00    2.55E+00 
+BETADC       9.38E+01    9.38E+01    9.38E+01    9.38E+01 
+GM           2.89E-04    2.89E-04    2.89E-04    2.89E-04 
+RPI          3.24E+05    3.24E+05    3.24E+05    3.24E+05 
+RX           0.00E+00    0.00E+00    0.00E+00    0.00E+00 
+RO           1.00E+12    1.00E+12    1.00E+12    1.00E+12 
+CBE          0.00E+00    0.00E+00    0.00E+00    0.00E+00 
+CBC          0.00E+00    0.00E+00    0.00E+00    0.00E+00 
+CJS          0.00E+00    0.00E+00    0.00E+00    0.00E+00 
+BETAAC       9.38E+01    9.38E+01    9.38E+01    9.38E+01 
+CBX/CBX2     0.00E+00    0.00E+00    0.00E+00    0.00E+00 
+FT/FT2       4.60E+15    4.60E+15    4.60E+15    4.60E+15 
+
+
+
+          JOB CONCLUDED
+
+          TOTAL JOB TIME             .03
+

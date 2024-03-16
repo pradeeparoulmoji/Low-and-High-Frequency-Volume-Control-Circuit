@@ -1,0 +1,147 @@
+
+**** 01/15/24 15:42:56 *********** Evaluation PSpice (Nov 1999) **************
+
+ * C:\Users\prada\Desktop\PROGETTO ELETTRONICA\Schematic1.sch
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+* Schematics Version 9.1 - Web Update 1
+* Mon Jan 15 15:42:53 2024
+
+
+
+** Analysis setup **
+.tran 0us 200ms 0 10us
+.OP 
+
+
+* From [PSPICE NETLIST] section of pspiceev.ini:
+.lib "nom.lib"
+
+.INC "Schematic1.net"
+
+**** INCLUDING Schematic1.net ****
+* Schematics Netlist *
+
+
+
+R_R3         $N_0002 $N_0001  10k  
+R_R1         0 $N_0002  10k  
+E_U1         $N_0001 0 VALUE {LIMIT(V($N_0002,$N_0003)*1E6,-15V,+15V)}
+C_C1         0 $N_0003  1u IC=10 
+R_R2         $N_0003 $N_0001  10k  
+
+**** RESUMING Schematic1.cir ****
+.INC "Schematic1.als"
+
+
+
+**** INCLUDING Schematic1.als ****
+* Schematics Aliases *
+
+.ALIASES
+R_R3            R3(1=$N_0002 2=$N_0001 )
+R_R1            R1(1=0 2=$N_0002 )
+E_U1            U1(OUT=$N_0001 +=$N_0002 -=$N_0003 )
+C_C1            C1(1=0 2=$N_0003 )
+R_R2            R2(1=$N_0003 2=$N_0001 )
+.ENDALIASES
+
+
+**** RESUMING Schematic1.cir ****
+.probe
+
+
+.END
+
+**** 01/15/24 15:42:56 *********** Evaluation PSpice (Nov 1999) **************
+
+ * C:\Users\prada\Desktop\PROGETTO ELETTRONICA\Schematic1.sch
+
+
+ ****     SMALL SIGNAL BIAS SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+($N_0001)   15.0000                   ($N_0002)    7.5000                       
+
+($N_0003)  -10.0000                   
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+
+    TOTAL POWER DISSIPATION   0.00E+00  WATTS
+
+
+**** 01/15/24 15:42:56 *********** Evaluation PSpice (Nov 1999) **************
+
+ * C:\Users\prada\Desktop\PROGETTO ELETTRONICA\Schematic1.sch
+
+
+ ****     OPERATING POINT INFORMATION      TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+
+
+
+**** VOLTAGE-CONTROLLED VOLTAGE SOURCES
+
+
+NAME         E_U1      
+V-SOURCE     1.500E+01
+I-SOURCE    -3.250E-03
+**** 01/15/24 15:42:56 *********** Evaluation PSpice (Nov 1999) **************
+
+ * C:\Users\prada\Desktop\PROGETTO ELETTRONICA\Schematic1.sch
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+($N_0001)   15.0000                   ($N_0002)    7.5000                       
+
+($N_0003)  -10.0000                   
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+
+    TOTAL POWER DISSIPATION   0.00E+00  WATTS
+
+
+
+          JOB CONCLUDED
+
+          TOTAL JOB TIME             .33
+

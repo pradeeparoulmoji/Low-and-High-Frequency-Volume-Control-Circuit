@@ -1,0 +1,23 @@
+* C:\Users\prada\Desktop\PROGETTO ELETTRONICA\Schematic1.sch
+
+* Schematics Version 9.1 - Web Update 1
+* Mon Jan 15 15:42:53 2024
+
+
+
+** Analysis setup **
+.tran 0us 200ms 0 10us
+.OP 
+
+
+* From [PSPICE NETLIST] section of pspiceev.ini:
+.lib "nom.lib"
+
+.INC "Schematic1.net"
+.INC "Schematic1.als"
+
+
+.probe
+
+
+.END
